@@ -1,30 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 
-/*
-  Vivien Berg — Personal Portfolio Template
-  ------------------------------------------
-  How to customize:
-  - PROFILE: your name, role line, intro, email, photo URL.
-  - PROJECTS: edit the array. Each card is one entry.
-  - LINKS: your external platforms.
-  - Colors and fonts live in the <style> block as CSS variables,
-    grouped under [data-theme="light"] and [data-theme="dark"].
-
-  Notes for your own deployment (outside this preview):
-  - To remember the user's theme choice across visits, save `theme`
-    to localStorage in the toggle handler and read it on first load.
-    Browser storage is disabled inside this preview, so it starts
-    from the system preference each time here.
-  - Replace the photo placeholder src with your real image and keep
-    a descriptive alt value.
-*/
-
 const PROFILE = {
   name: "Vivien Berg",
   role: "Student developer · Northern Virginia",
   intro:
-    "I build learning tools for students. My main project, SOLace, helps K–12 students across Virginia practice for their Standards of Learning tests for free.",
-  email: "vivien@example.com", // <- replace with your email
+    "I am a high school student passionate about web development, AI and machine learning, and research.",
+  email: "vivien.c.berg@gmail.com",
   photo: "", // <- paste an image URL here; leave empty to show the initials placeholder
 };
 
@@ -38,33 +19,13 @@ const PROJECTS = [
     tags: ["React", "JavaScript", "PostgreSQL"],
     href: "https://learnsolace.org",
     featured: true,
-  },
-  {
-    title: "Music Notation Editor",
-    blurb:
-      "A browser-based score editor for writing sheet music in the browser, with audio playback and PDF export. Built in vanilla JavaScript.",
-    stat: null,
-    statLabel: null,
-    tags: ["JavaScript", "OSMD", "Web Audio"],
-    href: "#",
-    featured: false,
-  },
-  {
-    title: "Your next project",
-    blurb:
-      "Swap this card for whatever you build next. Keep the blurb to two sentences so the grid stays even.",
-    stat: null,
-    statLabel: null,
-    tags: ["Edit", "Me"],
-    href: "#",
-    featured: false,
-  },
+  }
 ];
 
 const LINKS = [
-  { label: "GitHub", href: "https://github.com/", note: "Code and repositories" },
-  { label: "LinkedIn", href: "https://linkedin.com/", note: "Background and contact" },
-  { label: "SOLace", href: "https://learnsolace.org", note: "The live platform" },
+  { label: "GitHub", href: "https://github.com/iicebergg", note: "Code and repositories" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/vivien-berg/", note: "Background and contact" },
+  { label: "ORCID", href: "https://orcid.org/0009-0008-5085-8458", note: "Academic profile" },
 ];
 
 const SunIcon = (props) => (
@@ -290,13 +251,13 @@ export default function Portfolio() {
             Let's <span className="mark">talk</span>.
           </h2>
           <p className="footer-sub">
-            I'm open to collaborations, research, and questions about SOLace.
+            I'm open to collaborations, research, and inquiries.
           </p>
           <a className="footer-email" href={`mailto:${PROFILE.email}`}>
             {PROFILE.email}
           </a>
           <p className="footer-meta">
-            © {new Date().getFullYear()} {PROFILE.name}. Built with React.
+            © {new Date().getFullYear()} {PROFILE.name}
           </p>
         </div>
       </footer>
@@ -306,6 +267,8 @@ export default function Portfolio() {
 
 const CSS = `
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+
+html, body { margin: 0; padding: 0; }
 
 .root {
   --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
