@@ -13,10 +13,10 @@ const PROJECTS = [
   {
     title: "SOLace",
     blurb:
-      "A free practice platform for Virginia Standards of Learning tests, built for K–12 students. Tracks anonymous attempts to study how students perform on individual items.",
-    stat: "9,100+",
-    statLabel: "practice attempts",
-    tags: ["React", "JavaScript", "PostgreSQL"],
+      "A free practice platform for Virginia Standards of Learning tests, built for K–12 students. Tracks anonymous data for ongoing research at George Mason University. Featured on ABC7 and the Fairfax County Times.",
+    stat: "9,500+",
+    statLabel: "practices completed",
+    tags: ["JavaScript", "PostgreSQL"],
     href: "https://learnsolace.org",
     featured: true,
   }
@@ -87,7 +87,7 @@ function Reveal({ children, className = "", as: Tag = "div" }) {
 export default function Portfolio() {
   const [theme, setTheme] = useState("light");
 
-  // Start from the visitor's system preference.
+  // Start from the visitor's system preference
   useEffect(() => {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     setTheme(prefersDark ? "dark" : "light");
@@ -95,7 +95,6 @@ export default function Portfolio() {
 
   const toggleTheme = () => {
     setTheme((t) => (t === "light" ? "dark" : "light"));
-    // For your own site, also persist the choice here.
   };
 
   const initials = PROFILE.name
@@ -150,7 +149,7 @@ export default function Portfolio() {
           <div className="hero-text">
             <p className="eyebrow">Portfolio</p>
             <h1 id="hero-name" className="hero-name">
-              Hi, I'm Vivien. I build <span className="mark">learning tools</span> for students.
+              Vivien Berg
             </h1>
             <p className="hero-intro">{PROFILE.intro}</p>
             <div className="hero-actions">
@@ -172,6 +171,9 @@ export default function Portfolio() {
                 <span className="photo-hint">Add your photo</span>
               </div>
             )}
+            <div className="photo-info">
+              <a href={`mailto:${PROFILE.email}`} className="photo-email">{PROFILE.email}</a>
+            </div>
           </div>
         </section>
 
@@ -518,6 +520,23 @@ html, body { margin: 0; padding: 0; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+}
+.photo-info {
+  margin-top: 14px;
+  text-align: center;
+}
+.photo-email {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--gold-soft);
+  padding-bottom: 2px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.photo-email:hover {
+  border-bottom-color: var(--gold);
+  color: var(--gold-deep);
 }
 
 /* Sections */
