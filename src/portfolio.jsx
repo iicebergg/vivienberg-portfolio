@@ -182,7 +182,7 @@ export default function Portfolio() {
           <Reveal as="header" className="section-head">
             <span className="section-index">01</span>
             <h2 id="work-heading">Selected work</h2>
-            <p className="section-sub">Projects I have designed, built, and shipped.</p>
+            <p className="section-sub">Projects I have designed, built, and deployed.</p>
           </Reveal>
 
           <ul className="work-grid" role="list">
@@ -227,7 +227,7 @@ export default function Portfolio() {
           <Reveal as="header" className="section-head">
             <span className="section-index">02</span>
             <h2 id="links-heading">Find me elsewhere</h2>
-            <p className="section-sub">Other places my work lives.</p>
+            <p className="section-sub">Other places to find my work.</p>
           </Reveal>
 
           <ul className="links-list" role="list">
