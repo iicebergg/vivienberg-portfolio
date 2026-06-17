@@ -250,7 +250,7 @@ export default function Portfolio() {
       <footer className="site-footer" id="contact" aria-labelledby="contact-heading">
         <div className="footer-inner">
           <h2 id="contact-heading" className="footer-heading">
-            Let's <span className="mark">talk</span>.
+            Let's <span className="mark">connect</span>!
           </h2>
           <p className="footer-sub">
             I'm open to collaborations, research, and inquiries.
