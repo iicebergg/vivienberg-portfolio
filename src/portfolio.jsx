@@ -4,7 +4,7 @@ const PROFILE = {
   name: "Vivien Berg",
   role: "Student developer · Northern Virginia",
   intro:
-    "Hello! My name is Vivien Berg, and I am a rising senior in high school passionate about web development, AI, machine learning, and research.",
+    "Hello! My name is Vivien Berg, and I am a senior in high school passionate about machine learning and research.",
   email: "vivien@learnsolace.org",
   photo: "/vivien.jpeg",
 };
