@@ -17,8 +17,6 @@ const PROJECTS = [
     stat: "9,500+",
     statLabel: "practices completed",
     tags: ["JavaScript", "PostgreSQL"],
-    href: "https://learnsolace.org",
-    research: "../public/SOLace_Paper_Camera_Ready.pdf",
     featured: true,
   }
 ];
@@ -211,14 +209,14 @@ export default function Portfolio() {
                     ))}
                   </ul>
 
-                  <a className="card-link" href={p.href} target={p.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
+                  <a className="card-link" href={"https://learnsolace.org"} target={"_blank"} rel="noopener noreferrer">
                     Visit {p.title}
                     <span aria-hidden="true" className="arrow">
                       →
                     </span>
                   </a>
 
-                  <a className="card-link" href={p.research} target={p.research.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
+                  <a className="card-link" href={"../public/SOLace_Paper_Camera_Ready.pdf"} target={"_blank"} rel="noopener noreferrer">
                     Read preprint
                     <span aria-hidden="true" className="arrow">
                       →
@@ -637,7 +635,7 @@ html, body { margin: 0; padding: 0; }
 }
 .card-link {
   margin-top: auto;
-  display: inline-flex;
+  display: inline-block;
   align-items: center;
   gap: 8px;
   color: var(--ink);
