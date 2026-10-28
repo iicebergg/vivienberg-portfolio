@@ -209,19 +209,21 @@ export default function Portfolio() {
                     ))}
                   </ul>
 
-                  <a className="card-link" href={"https://learnsolace.org"} target={"_blank"} rel="noopener noreferrer">
-                    Visit {p.title}
-                    <span aria-hidden="true" className="arrow">
-                      →
-                    </span>
-                  </a>
+                  <div className="card-links">
+                    <a className="card-link" href={"https://learnsolace.org"} target={"_blank"} rel="noopener noreferrer">
+                      Visit {p.title}
+                      <span aria-hidden="true" className="arrow">
+                        →
+                      </span>
+                    </a>
 
-                  <a className="card-link" href={"../public/SOLace_Paper_Camera_Ready.pdf"} target={"_blank"} rel="noopener noreferrer">
-                    Read preprint
-                    <span aria-hidden="true" className="arrow">
-                      →
-                    </span>
-                  </a>
+                    <a className="card-link" href={"/SOLace_Paper_Camera_Ready.pdf"} target={"_blank"} rel="noopener noreferrer">
+                      Read preprint
+                      <span aria-hidden="true" className="arrow">
+                        →
+                      </span>
+                    </a>
+                  </div>
                 </article>
               </Reveal>
             ))}
@@ -633,8 +635,8 @@ html, body { margin: 0; padding: 0; }
   border-radius: 7px;
   color: var(--muted);
 }
+.card-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .card-link {
-  margin-top: auto;
   display: inline-block;
   align-items: center;
   gap: 8px;
