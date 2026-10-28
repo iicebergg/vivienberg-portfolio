@@ -18,6 +18,7 @@ const PROJECTS = [
     statLabel: "practices completed",
     tags: ["JavaScript", "PostgreSQL"],
     href: "https://learnsolace.org",
+    research: "../public/SOLace_Paper_Camera_Ready.pdf",
     featured: true,
   }
 ];
@@ -212,6 +213,13 @@ export default function Portfolio() {
 
                   <a className="card-link" href={p.href} target={p.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
                     Visit {p.title}
+                    <span aria-hidden="true" className="arrow">
+                      →
+                    </span>
+                  </a>
+
+                  <a className="card-link" href={p.research} target={p.research.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer">
+                    Read preprint
                     <span aria-hidden="true" className="arrow">
                       →
                     </span>
